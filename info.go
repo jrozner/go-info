@@ -37,7 +37,7 @@ type Data struct {
 
 // Values returns a Data struct containing the stored build and version information
 func Values() (*Data, error) {
-	date, err := time.Parse(time.RFC1123, buildDate)
+	date, err := time.Parse(time.RFC3339, buildDate)
 	if err != nil {
 		return nil, err
 	}
